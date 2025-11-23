@@ -1,0 +1,51 @@
+@use "./functions" as f;
+
+$breakpoints: (
+  "sm": 640px,
+  "md": 768px,
+  "lg": 1024px,
+  "xl": 1280px,
+  "xxl": 1536px,
+);
+
+$colors: (
+  "hd": rgb(42, 83, 71),
+  "p": rgb(5, 51, 37),
+  "hover": rgb(126, 189, 126),
+  "bg1": rgb(92, 92, 97),
+  "bg2": rgb(190, 194, 190),
+  "wht": rgb(245, 245, 245),
+);
+
+$font-sz: (
+  "hd-xxl": 5.5rem,
+  "hd-xl": 4.5rem,
+  "hd-l": 3rem,
+  "hd-m": 1.5rem,
+  "bd-xl": 2rem,
+  "bd-l": 1.125rem,
+  "bd-m": 1rem,
+);
+
+$fonts-w: (
+  "medium": 400,
+  "bold": 700,
+  "extrabold": 800,
+);
+
+$line-h: (
+  "hd-xxl": 5.5rem,
+  "hd-xl": 4.5rem,
+  "hd-l": 3.5rem,
+  "hd-m": 2rem,
+  "bd-l": 1.75rem,
+);
+
+$word-sp: (
+  "hd-xxl": f.to-rem(-2.5),
+  "hd-xl": f.to-rem(-2.05),
+  "hd-l": f.to-rem(-1.5),
+);
+
+$primary-font: "Bebas Neue", sans-serif;
+$secondary-font: "Momo Trust Sans", sans-serif;

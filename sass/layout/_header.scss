@@ -1,0 +1,79 @@
+@use "../abstracts/abstracts" as abs;
+@use "sass:map";
+
+header {
+  width: 100%;
+  box-sizing: border-box;
+  .main-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img.header-logo {
+      width: 60%;
+      position: relative;
+      grid-column: 1;
+    }
+
+    .menu-toggle {
+      width: 4rem;
+      cursor: pointer;
+      color: black;
+      grid-column: 2;
+      svg {
+        width: 4rem;
+      }
+    }
+    .resp-menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .checkbox {
+    display: none;
+  }
+
+  .hero-image {
+    width: 100%;
+    border-radius: 10rem;
+  }
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 1rem 2rem;
+    a {
+      color: map.get(abs.$colors, "p");
+    }
+
+    h1 {
+      @include abs.hd-m();
+      @include abs.bp("sm") {
+      @include abs.hd-l();
+    }
+    @include abs.bp("md") {
+       @include abs.hd-xl()
+    }
+    }
+    p {
+      @include abs.bd-m();
+       @include abs.bp("sm") {
+      @include abs.bd-l();
+    }
+    @include abs.bp("md") {
+       @include abs.bd-xl()
+    }
+    }
+  }
+
+  .blog-hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}

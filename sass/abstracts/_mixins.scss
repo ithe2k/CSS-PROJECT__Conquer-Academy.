@@ -1,0 +1,66 @@
+@use "./variables" as var;
+
+@use "sass:map";
+/*breakpoints-mixin*/
+@mixin bp($size) {
+  @media (min-width: map.get(var.$breakpoints, $size)) {
+    @content;
+  }
+}
+/*fonts-mixins*/
+
+@mixin hd-xxl() {
+  font-family: var.$primary-font;
+  font-size: map.get(var.$font-sz, "hd-xxl");
+  font-weight: map.get(var.$fonts-w, "bold");
+  line-height: map.get(var.$line-h, "hd-xxl");
+  word-spacing: map.get(var.$word-sp, "hd-xxl");
+}
+
+@mixin hd-xl() {
+  font-family: var.$primary-font;
+  font-size: map.get(var.$font-sz, "hd-xl");
+  font-weight: map.get(var.$fonts-w, "bold");
+  line-height: map.get(var.$line-h, "hd-xl");
+  word-spacing: map.get(var.$word-sp, "hd-xl");
+}
+
+@mixin hd-l() {
+  font-family: var.$primary-font;
+  font-size: map.get(var.$font-sz, "hd-l");
+  font-weight: map.get(var.$fonts-w, "bold");
+  line-height: map.get(var.$line-h, "hd-l");
+  word-spacing: map.get(var.$word-sp, "hd-l");
+}
+
+@mixin hd-m() {
+  font-family: var.$primary-font;
+  font-size: map.get(var.$font-sz, "hd-m");
+  font-weight: map.get(var.$fonts-w, "bold");
+  line-height: map.get(var.$line-h, "hd-m");
+  color: map.get(var.$colors, "hd");
+}
+
+@mixin bd-xl() {
+  font-family: var.$secondary-font;
+  font-size: map.get(var.$font-sz, "bd-xl");
+  font-weight: map.get(var.$fonts-w, "medium");
+  line-height: map.get(var.$line-h, "hd-m");
+}
+
+
+
+@mixin bd-l() {
+  font-family: var.$secondary-font;
+  font-size: map.get(var.$font-sz, "bd-l");
+  font-weight: map.get(var.$fonts-w, "medium");
+  line-height: map.get(var.$line-h, "hd-m");
+}
+
+@mixin bd-m() {
+  font-family: var.$secondary-font;
+  font-size: map.get(var.$font-sz, "bd-m");
+  font-weight: map.get(var.$fonts-w, "medium");
+  color: map.get(var.$colors, "p");
+  line-height: map.get(var.$line-h, "bd-l");
+}

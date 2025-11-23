@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Título para el navegador y los buscadores -->
+    <title>Conquer Academy - Registro</title>
+
+    <!-- Descripción de la página para los buscadores -->
+    <meta name="description" content="formulario de registro" />
+
+    <!-- Palabras clave para los buscadores -->
+    <meta name="keywords" content="p, h1, h2, h3, h4, h5" />
+
+    <!-- Autor de la página -->
+    <meta name="author" content="beydi_diallo" />
+
+    <!-- Favicon de la página -->
+    <link rel="icon" type="image/x-icon" href="../elements/favicon.ico" />
+
+    <!-- Codificación-->
+    <meta charset="UTF-8" />
+
+    <script type="module" src="/src/main.js"></script>
+
+    <!-- Para que la web sea responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <header>
+      <section class="main-bar">
+        <!--Logo-->
+
+        <img
+          class="header-logo"
+          src="./img/logo-conquerblocks-color.png"
+          alt="conquer_academy_logo"
+        />
+
+        <!--nav-Secciones-->
+        <div class="resp-menu">
+          <input class="checkbox" type="checkbox" id="menu-toggle" />
+          <label for="menu-toggle" class="menu-toggle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 -960 960 960"
+              fill="rgb(2, 78, 78)"
+            >
+              <path
+                d="M120-680v-80h720v80H120Zm0 480v-80h720v80H120Zm0-240v-80h720v80H120Z"
+              />
+            </svg>
+          </label>
+          <nav class="main__nav">
+            <ul class="nav_list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="quienes_somos.html">Quiénes somos</a></li>
+              <li><a href="cursos.html">Cursos</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="registro.html">Registro</a></li>
+              <li><a href="login.html">Login</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+    </header>
+    <main class="main">
+      <section class="container_registro">
+        <legend class="datos_personales">Datos personales</legend>
+        <form
+          class="form-registro"
+          action=""
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <p>
+            <label for="nombre">Nombre y apellidos</label>
+
+            <input type="text" name="nombre" id="nombre" />
+          </p>
+          <p>
+            <label for="fecha_nacimiento">Fecha de nacimiento</label>
+
+            <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" />
+          </p>
+          <p>
+            <label for="email">Correo electrónico</label>
+
+            <input type="email" name="email" id="email" />
+          </p>
+          <p>
+            <label for="password">contraseña</label>
+
+            <input type="password" name="password" id="password" />
+          </p>
+          <p>
+            <label for="adress">Dirección</label>
+
+            <input type="text" name="adress" id="adress" />
+          </p>
+          <p>
+            <label for="web">Página web</label>
+
+            <input type="url" name="web" id="web" />
+          </p>
+          <p>
+            <label for="foto">Foto</label>
+            <input type="file" name="foto" id="foto" />
+          </p>
+          <div class="bio">
+            <label class="label_bio" for="bio">Biografía</label>
+
+            <textarea
+              name="bio"
+              id="bio"
+              cols="30"
+              rows="10"
+              placeholder="Cuéntanos más sobre tí..."
+            ></textarea>
+          </div>
+
+          <button>Enviar</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <section class="footer_content">
+        <!--Aviso legal-->
+        <a class="avisolegal" href="aviso-legal.html">Aviso legal</a>
+
+        <!--Copyright-->
+        <p class="copyright">© Conquer Academy 2025</p>
+      </section>
+    </footer>
+  </body>
+</html>

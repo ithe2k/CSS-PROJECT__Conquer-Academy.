@@ -1,0 +1,49 @@
+@use "animations";
+@use "reset";
+@use "typography";
+@use "../abstracts/abstracts" as abs;
+@use "sass:map";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: white;
+  h1 {
+    @include abs.hd-m();
+    margin-bottom: 1rem;
+    @include abs.bp("sm") {
+      @include abs.hd-l();
+    }
+  }
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: map.get(abs.$colors, "hd");
+  }
+  p {
+    @include abs.bd-m();
+    margin-bottom: 1rem;
+    @include abs.bp("sm") {
+      @include abs.bd-l();
+    }
+    @include abs.bp("md") {
+      @include abs.bd-xl();
+    }
+  }
+  section {
+    margin-bottom: 2rem;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

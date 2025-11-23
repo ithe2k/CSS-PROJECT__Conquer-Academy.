@@ -1,0 +1,24 @@
+@use "../abstracts/abstracts" as abs;
+@use "sass:map";
+
+/*header*/
+.nav_list {
+  list-style: none;
+  text-align: center;
+
+  li a {
+    text-decoration: none;
+    color: map.get(abs.$colors, "p");
+    display: none;
+    &:hover{
+      color: map.get(abs.$colors, "hover");
+    }
+    @include abs.bp("md") {
+      font-size: map.get(abs.$font-sz, "hd-l");
+    }
+  }
+}
+
+.checkbox:checked ~ .main__nav .nav_list li a {
+  display: block;
+}

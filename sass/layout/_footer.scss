@@ -1,0 +1,19 @@
+@use "../abstracts/abstracts" as abs;
+@use "sass:map";
+
+.footer_content {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  margin-bottom: 0;
+  background-color: map.get(abs.$colors, "p");
+  .avisolegal {
+    text-decoration: none;
+    @include abs.bd-m();
+    color: aliceblue;
+  }
+  .copyright {
+    @include abs.bd-m();
+    color: aliceblue;
+  }
+}
