@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Título para el navegador y los buscadores -->
+    <title>Conquer Academy - Contacto</title>
+
+    <!-- Descripción de la página para los buscadores -->
+    <meta name="description" content="informacion de contacto" />
+
+    <!-- Palabras clave para los buscadores -->
+    <meta name="keywords" content="p, h1, h2, h3, h4, h5" />
+
+    <!-- Autor de la página -->
+    <meta name="author" content="beydi_diallo" />
+
+    <!-- Favicon de la página -->
+    <link rel="icon" type="image/x-icon" href="../elements/favicon.ico" />
+
+    <!-- Codificación-->
+    <meta charset="UTF-8" />
+
+
+    <!--responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" crossorigin src="./assets/main-D31r5jJ_.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/main-Bg_e0XWn.css">
+  </head>
+
+  <body>
+    <header>
+      <section class="main-bar">
+        <!--Logo-->
+
+        <img
+          class="header-logo"
+          src="./assets/logo-conquerblocks-color-Do0gZ8Gu.png"
+          alt="conquer_academy_logo"
+        />
+
+        <!--nav-Secciones-->
+        <div class="resp-menu">
+          <input class="checkbox" type="checkbox" id="menu-toggle" />
+          <label for="menu-toggle" class="menu-toggle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 -960 960 960"
+              fill="rgb(2, 78, 78)"
+            >
+              <path
+                d="M120-680v-80h720v80H120Zm0 480v-80h720v80H120Zm0-240v-80h720v80H120Z"
+              />
+            </svg>
+          </label>
+          <nav class="main__nav">
+            <ul class="nav_list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="quienes_somos.html">Quiénes somos</a></li>
+              <li><a href="cursos.html">Cursos</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="registro.html">Registro</a></li>
+              <li><a href="login.html">Login</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+    </header>
+    <main class="main">
+      <p>Contacta con nosotros</p>
+
+      <h3>Conquer Academy</h3>
+      <p>Dirección: Orwell 84, 28020,Madrid</p>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194348.23370581598!2d-3.8443493319629!3d40.43783727760215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422997800a3c81%3A0xc436dec1618c2269!2sMadrid!5e0!3m2!1sen!2ses!4v1754781459008!5m2!1sen!2ses"
+        width="600"
+        height="450"
+        class="map"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+      <p>Mail de contacto: contacto@conqueracademy.com</p>
+      <p>Telefono de contacto : +91 123 45 67</p>
+
+      <h3>
+        Si lo deseas puedes contactar con nosotros rellenando este formulario y
+        nos pondremos en contacto contigo.
+      </h3>
+
+      <form class="contacto_form" action="" method="get">
+        <label for="nombre">Nombre</label>
+
+        <input type="text" id="nombre" required />
+
+        <label for="mail">Correo Electrónico</label>
+
+        <input type="email" name="mail" id="mail" required />
+
+        <label for="motivo">Motivo</label>
+
+        <select name="motivo" id="motivo" required>
+          <option value="">---Elija una opcón---</option>
+          <option value="inscripcion">Inscripción</option>
+          <option value="duda-academica">Duda académica</option>
+          <option value="precios">Precios</option>
+          <option value="sugerencias">Sugerencias</option>
+          <option value="otros">Otras cuestiones</option>
+        </select>
+
+        <label for="info">Pregúntanos lo que quieras</label>
+
+        <textarea
+          name="demanda-info"
+          id="info"
+          cols="30"
+          rows="10"
+          placeholder="Describe el motivo de tu consulta..."
+          required
+        ></textarea>
+
+        <button>Enviar</button>
+      </form>
+    </main>
+    <footer>
+      <section class="footer_content">
+        <!--Aviso legal-->
+        <a class="avisolegal" href="aviso-legal.html">Aviso legal</a>
+
+        <!--Copyright-->
+        <p class="copyright">© Conquer Academy 2025</p>
+      </section>
+    </footer>
+  </body>
+</html>
