@@ -81,45 +81,46 @@
       ></iframe>
       <p>Mail de contacto: contacto@conqueracademy.com</p>
       <p>Telefono de contacto : +91 123 45 67</p>
+      <section class="space-form">
+        <h3>
+          Si lo deseas puedes contactar con nosotros rellenando este formulario
+          y nos pondremos en contacto contigo.
+        </h3>
 
-      <h3>
-        Si lo deseas puedes contactar con nosotros rellenando este formulario y
-        nos pondremos en contacto contigo.
-      </h3>
+        <form class="contacto_form" action="" method="get">
+          <label for="nombre">Nombre</label>
 
-      <form class="contacto_form" action="" method="get">
-        <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" required />
 
-        <input type="text" id="nombre" required />
+          <label for="mail">Correo Electrónico</label>
 
-        <label for="mail">Correo Electrónico</label>
+          <input type="email" name="mail" id="mail" required />
 
-        <input type="email" name="mail" id="mail" required />
+          <label for="motivo">Motivo</label>
 
-        <label for="motivo">Motivo</label>
+          <select name="motivo" id="motivo" required>
+            <option value="">---Elija una opcón---</option>
+            <option value="inscripcion">Inscripción</option>
+            <option value="duda-academica">Duda académica</option>
+            <option value="precios">Precios</option>
+            <option value="sugerencias">Sugerencias</option>
+            <option value="otros">Otras cuestiones</option>
+          </select>
 
-        <select name="motivo" id="motivo" required>
-          <option value="">---Elija una opcón---</option>
-          <option value="inscripcion">Inscripción</option>
-          <option value="duda-academica">Duda académica</option>
-          <option value="precios">Precios</option>
-          <option value="sugerencias">Sugerencias</option>
-          <option value="otros">Otras cuestiones</option>
-        </select>
+          <label for="info">Pregúntanos lo que quieras</label>
 
-        <label for="info">Pregúntanos lo que quieras</label>
+          <textarea
+            name="demanda-info"
+            id="info"
+            cols="30"
+            rows="10"
+            placeholder="Describe el motivo de tu consulta..."
+            required
+          ></textarea>
 
-        <textarea
-          name="demanda-info"
-          id="info"
-          cols="30"
-          rows="10"
-          placeholder="Describe el motivo de tu consulta..."
-          required
-        ></textarea>
-
-        <button>Enviar</button>
-      </form>
+          <button>Enviar</button>
+        </form>
+      </section>
     </main>
     <footer>
       <section class="footer_content">

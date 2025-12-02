@@ -34,6 +34,17 @@
       a strong:hover {
         color: #09afa1;
       }
+      @include abs.bp("xl") {
+        @include abs.bd-xl();
+        line-height: normal;
+      }
+    }
+    .todos {
+      @include abs.bp("lg") {
+        color: map.get(abs.$colors, "wht");
+        background-color: map.get(abs.$colors, "p");
+        padding: 0 5rem;
+      }
     }
   }
 }
@@ -44,24 +55,40 @@
   background-color: map.get(abs.$colors, "hd");
   width: 100%;
   margin-bottom: 2rem;
+  @include abs.bp("lg") {
+    font-size: 3rem;
+  }
 }
 
 .full-claustro {
   .curso-intro {
     border: 2px solid map.get(abs.$colors, "hd");
     border-radius: 10%;
+    @include abs.bp("md") {
+      h2 {
+        font-size: 3rem;
+      }
+    }
   }
   .claustro {
     @include abs.bp("md") {
       display: grid;
       grid-template-columns: 1fr 1fr;
       place-content: center;
+      @include abs.bp("xxl") {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
     }
     .prof {
       width: 12rem;
       height: 15rem;
       object-fit: cover;
       margin: 2rem 0;
+    }
+  }
+  @include abs.bp("xxl") {
+    .m-claustro {
+      grid-template-columns: 1fr 1fr;
     }
   }
 }
@@ -200,7 +227,19 @@
 
 .map {
   width: 100%;
+  margin-bottom: 3rem;
 }
+
+ .space-form {
+    @include abs.bp("xl") {
+      display: flex;
+      justify-content: center;
+      margin-top: 3rem;
+     h3{
+      max-width: 25%;
+     }
+    }
+  }
 .contacto_form {
   input,
   button {
@@ -216,4 +255,5 @@
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
+ 
 }

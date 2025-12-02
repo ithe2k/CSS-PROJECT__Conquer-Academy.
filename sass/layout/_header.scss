@@ -8,11 +8,19 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include abs.bp("lg") {
+      flex-direction: row;
+      justify-content: space-around;
+      margin-top: 1rem;
+    }
 
     img.header-logo {
       width: 60%;
       position: relative;
       grid-column: 1;
+      @include abs.bp("lg") {
+        width: 20%;
+      }
     }
 
     .menu-toggle {
@@ -22,6 +30,9 @@ header {
       grid-column: 2;
       svg {
         width: 4rem;
+      }
+      @include abs.bp("lg") {
+        display: none;
       }
     }
     .resp-menu {
@@ -36,39 +47,65 @@ header {
     display: none;
   }
 
-  .hero-image {
-    width: 100%;
-    border-radius: 10rem;
-  }
-  .hero-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin: 1rem 2rem;
-    a {
-      color: map.get(abs.$colors, "p");
+  .hero-section {
+    @include abs.bp("lg") {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-around;
+     margin: 2rem 1rem;
+     align-items: center;
     }
+    .hero-image {
+      width: 100%;
+      border-radius: 10rem;
+       @include abs.bp('lg'){
+        border-radius: 5rem;
+        @include abs.bp('xl'){
+          height: 28rem;
+        }
+      }
+    }
+    .hero-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin: 1rem 2rem;
+       @include abs.bp('lg'){
+        max-width: 50%;
+      }
+      a {
+        color: map.get(abs.$colors, "p");
+         
+      }
 
-    h1 {
-      @include abs.hd-m();
-      @include abs.bp("sm") {
-      @include abs.hd-l();
-    }
-    @include abs.bp("md") {
-       @include abs.hd-xl()
-    }
-    }
-    p {
-      @include abs.bd-m();
-       @include abs.bp("sm") {
-      @include abs.bd-l();
-    }
-    @include abs.bp("md") {
-       @include abs.bd-xl()
-    }
+      h1 {
+        @include abs.hd-m();
+        @include abs.bp("sm") {
+          @include abs.hd-l();
+        }
+        @include abs.bp("md") {
+          @include abs.hd-l();
+        }
+        @include abs.bp('xxl'){
+          @include abs.hd-xl();
+        }
+      }
+      p {
+        @include abs.bd-m();
+        @include abs.bp("sm") {
+          @include abs.bd-l();
+        }
+        @include abs.bp("md") {
+          @include abs.bd-l();
+        }
+        @include abs.bp('xl'){
+           @include abs.bd-xl();
+        }
+      }
     }
   }
+  
 
   .blog-hero-section {
     display: flex;

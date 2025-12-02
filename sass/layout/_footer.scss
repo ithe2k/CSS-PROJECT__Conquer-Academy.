@@ -11,9 +11,15 @@
     text-decoration: none;
     @include abs.bd-m();
     color: aliceblue;
+    @include abs.bp('md'){
+      @include abs.bd-l();
+    }
   }
   .copyright {
     @include abs.bd-m();
     color: aliceblue;
+     @include abs.bp('md'){
+      @include abs.bd-l();
+    }
   }
 }
